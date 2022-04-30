@@ -1,0 +1,24 @@
+.body{
+    background-image: url('../../images/banner.jpg');
+    width:100 vh;
+    height: 450px;
+    margin-bottom: 30px;
+}
+.article{
+      padding-top: 90px;
+     display: flex;
+     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    color: white;
+    font-size: 50px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    line-height: 90px;
+}
+h3{
+    color: rgba(255, 255, 255, 0.929);
+    font-size: 30px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}

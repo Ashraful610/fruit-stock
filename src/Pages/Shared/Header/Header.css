@@ -1,0 +1,15 @@
+.link {
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.link:hover{
+    background-color: white;
+    padding: 0px 10px;
+    border-radius: 5px;
+    box-sizing: border-box;    
+}
+.navbar{
+    background-color: black;
+}
