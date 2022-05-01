@@ -1,0 +1,16 @@
+.fruits-article{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-gap: 20px;
+}
+@media screen  and (max-width:415px){
+    .fruits-article{
+        display: grid;
+        grid-template-columns:repeat(1 , 1fr);
+    }
+    
+}
+.orchard{
+    line-height: 30px;
+    font-size: 20px;
+}

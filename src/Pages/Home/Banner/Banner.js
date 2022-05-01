@@ -5,8 +5,12 @@ const Banner = () => {
     return (
         <div className='body'>
             <div className='article  w-75 mx-auto ' >
-               <h2 className='pageHeading'>Welcome to Our Fruits Stock</h2> 
-               <h3>We stock a variety of good quality fruits here</h3>
+               <p className='pageHeading'>
+                Take your  
+                  <span className='text-warning'> fruits </span> to  keep immune
+                </p> 
+               <h3>We stock a variety of
+                 <span className='text-warning'> good quality fruits </span>  here</h3>
             </div>
                   
           </div>

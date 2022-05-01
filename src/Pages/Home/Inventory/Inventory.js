@@ -8,7 +8,8 @@ const Inventory = () => {
     const newFruits = fruits.slice(0 , 6)
     return (
         <div className='container'>
-            <h5 className='inventory'>Fruits Inventory </h5>
+            <h5 className='inventory'>
+               <span className='text-warning'>Fruits</span>  Inventory </h5>
             <div className='fruits'>
                     {
                         newFruits.map(fruit => <Item 

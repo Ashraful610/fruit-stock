@@ -5,7 +5,7 @@ img{
 
 .update-btn{
     border: none;
-    background-color: black;
+    background-color: rgba(255, 166, 0, 0.667);
     color: white;
     border-radius: 30px;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
@@ -14,8 +14,8 @@ img{
     outline: none;
 }
 .update-btn:hover{
-    background-color:white;
-    color: black !important ;
+    background-color:orange;
+    color: white !important ;
     font-weight: 600;
     box-shadow: -40px rgb(114, 111, 111);
     color: #fff;
