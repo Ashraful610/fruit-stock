@@ -1,17 +1,14 @@
 import './Row.css'
 
-const Row = ({fruit}) => {
+const Row = ({fruit , handleDelete}) => {
     const {name, price, description, img, suplier } = fruit
     const newDescription = description.slice(0  , 85)
 
-    const handleDelete = id => {
-            console.log(id)
-    }
     return (
             <tr>
                <td>
                    {
-                       <img className='table-img' src={img} />
+                       <img className='table-img' src={img} alt='' />
                    }
                </td>
                 <td className=' detail'>
