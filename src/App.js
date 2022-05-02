@@ -4,6 +4,8 @@ import './App.css';
 import Blogs from './Pages/Blogs/Blogs';
 import Home from './Pages/Home/Home/Home';
 import ManageInventories from './Pages/Home/Inventory/ManageInventories/ManageInventories';
+import LogIn from './Pages/LogIn/LogIn';
+import Register from './Pages/Register/Register';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
 
@@ -16,6 +18,8 @@ function App() {
             <Route path='/home' element={<Home></Home>}></Route>
             <Route path='/blogs' element={<Blogs></Blogs>}></Route>
             <Route path='/manage' element={<ManageInventories></ManageInventories>}></Route>
+            <Route path='/login' element={<LogIn></LogIn>}></Route>
+            <Route path='/register' element={<Register></Register>}></Route>
         </Routes>
         <Footer></Footer>
 

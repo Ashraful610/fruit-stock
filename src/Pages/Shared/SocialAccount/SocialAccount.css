@@ -1,0 +1,38 @@
+.or-div{
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    height: 50px;
+}
+.div{
+    height: 20px;
+}
+hr:not([size]){
+    height: 3px;
+}
+.line{
+    width: 120px;
+    background-color: orange;
+}
+.or{
+    font-size: 25px;
+    color: orange;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.google-btn{
+    font-size: 24px;
+    width: 100%;
+    margin-top: 30px;
+}
+@media screen and (max-width:415px) {
+    .or-div{
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+        height: 50px;
+    }
+    .google-btn{
+        margin-top: 20px;
+    }
+}

@@ -15,6 +15,10 @@ const Header = () => {
                     <Link className='link fs-4' to='/home'>Home</Link> 
                     <Link className='link fs-4' to='/blogs'>Blogs</Link>
                     </Nav>
+                    <Nav className="ms-auto ms-4">
+                    <Link className='link fs-4' to='/login'>Sign In</Link> 
+                    {/* <Link className='link fs-4' to='/blogs'>Blogs</Link> */}
+                    </Nav>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>

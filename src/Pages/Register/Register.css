@@ -1,0 +1,21 @@
+.already-account{
+    color: white;
+    font-size: 17px;
+}
+.signUp-form{
+    background-image: url('https://i.ibb.co/8BpqFQS/form.jpg');
+    background-size: 600px;
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    height: 750px;
+}
+@media screen  and (max-width:415px){
+    .already-account{
+        font-size: 15px;
+    }
+    .signUp-form{
+        width: 350px;
+    }
+    
+}

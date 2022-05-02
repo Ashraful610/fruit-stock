@@ -1,0 +1,38 @@
+.form{
+    background-image: url('https://i.ibb.co/8BpqFQS/form.jpg');
+    background-size: 600px;
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    height: 600px;
+}
+
+.input-field{
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    background-color: rgba(0,0,0,0);
+}
+.signUp-btn-div{
+    display: flex;
+    justify-content: center;
+}
+.signIn-btn{
+    font-size: 20px;
+    width: 100%;
+   margin-top: 20px;
+   margin-bottom: 20px;
+}
+.no-account{
+    color: white;
+    font-size: 20px;
+}
+@media screen  and (max-width:415px){
+    .form{
+        width: 350px;
+        margin-top: 10px ;
+    }
+    .no-account{
+        font-size: 15px;
+    }
+}
