@@ -10,11 +10,39 @@
     grid-template-columns: repeat(3 , 1fr);
     grid-gap: 20px;
 }
+.manage-div{
+    display: flex;
+    justify-content:flex-end;
+}
+.manage-btn{
+    font-size: 25px;
+    margin: 20px ;
+}
+.right-arrow{
+    margin-left: 10px;
+    width: 50px;
+    height: 40px;
+    border: none;
+}
 @media screen  and (max-width:415px){
     .fruits{
         display: grid;
         grid-template-columns:1fr;
         grid-gap: 20px;
+    }
+    .manage-div{
+        display: flex;
+        justify-content:center;
+    }
+    .manage-btn{
+        font-size: 20px;
+        margin: 20px ;
+    }
+    .right-arrow{
+        margin-left: 10px;
+        width: 30px;
+        height: 30px;
+        border: none;
     }
     
 }
