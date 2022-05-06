@@ -22,7 +22,9 @@ const Row = ({fruit , handleDelete}) => {
                     </p>
                  </td>
                 <td className='delete-td'>
-                    <button className='btn btn-danger delete-btn' onClick={() => handleDelete(fruit._id)}>Delete</button>
+                    <button className='btn btn-danger delete-btn' onClick={() => handleDelete(fruit._id)}>
+                       Delete
+                    </button>
                 </td>
             </tr>
         

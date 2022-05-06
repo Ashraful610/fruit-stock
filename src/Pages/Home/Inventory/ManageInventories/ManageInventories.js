@@ -1,6 +1,8 @@
-import { Table } from 'react-bootstrap';
+import { Button, Table } from 'react-bootstrap';
 import useFruits from '../../../Hooks/useFruits';
 import Row from './Row/Row';
+import './ManageInventories.css'
+import { Link } from 'react-router-dom';
 
 const ManageInventories = () => {
     const [fruits , setFruits] = useFruits()
@@ -8,23 +10,29 @@ const ManageInventories = () => {
     const handleDelete = id => {
         const procced = window.confirm('Are you sure you want to delete fruit')
         if(procced){
-            console.log(id)
            const url = `http://localhost:5000/fruits/${id}`
            fetch(url , {
                method:'DELETE'
            })
            .then(res => res.json())
-           .then(data => {
+           .then(() => {
                const remaningFruits = fruits.filter(fruit => fruit._id !== id)
                setFruits(remaningFruits)
            })
         }
     }
+    // const navigate = useNavigate()
+
     return (
         <div className='container mt-3 '>
             <h2 className='text-center mb-4'>Manage 
                 <span className='text-warning'> Inventories</span>
             </h2>
+            <div className='add-new-item'>
+                <Link to='/addNewItem'>
+                   <Button className='btn btn-warning' size='lg'>Add New Item</Button>
+                </Link>
+            </div>
          <Table striped bordered hover size="sm" responsive="sm">
             <thead>
                 <tr>

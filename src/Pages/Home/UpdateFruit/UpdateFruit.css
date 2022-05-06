@@ -1,0 +1,23 @@
+
+.update-container{
+    margin: 30px;
+    display: flex;
+    box-shadow: 5px 15px orange;
+}
+
+.update-card{
+    width: 50%;
+}
+.update-form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.quantity-field{
+    width: 75%;
+    height: 50px;
+    font-size: 20px;
+    margin: 10px;
+}

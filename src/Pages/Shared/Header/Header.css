@@ -1,18 +1,16 @@
 .link {
     text-decoration: none;
     color: white;
-    margin-right: 20px;
-    margin-left: 20px;
+    margin-right: 15px;
+    margin-left: 15px;
 }
 .link:hover{
-    background-color: white;
-    padding: 0px 10px;
-    border-radius: 5px;
-    box-sizing: border-box;    
-}
+    color: orange;
+ }
 .navbar{
     background-color: black;
 }
+
 @media screen and (max-width:415px) {
     .navbar-toggler{
         background-color: white;

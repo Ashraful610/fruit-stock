@@ -1,0 +1,18 @@
+.add-fruit-div{
+    background-image: url('https://i.ibb.co/8BpqFQS/form.jpg');
+    background-size: 600px;
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    height: 750px;
+}
+.add-fruit{
+    width: 300px;
+}
+.description{
+    height: 100px !important;
+    width: 300px !important;
+}
+.newFruit{
+
+}

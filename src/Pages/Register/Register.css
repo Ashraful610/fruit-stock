@@ -10,6 +10,10 @@
     padding: 20px;
     height: 750px;
 }
+.error{
+    font-size: 15px;
+    color:orange ;
+}
 @media screen  and (max-width:415px){
     .already-account{
         font-size: 15px;
