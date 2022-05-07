@@ -1,4 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Toaster } from 'react-hot-toast';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Blogs from './Pages/Blogs/Blogs';
@@ -36,7 +37,7 @@ function App() {
             }></Route>
         </Routes>
         <Footer></Footer>
-        
+        <Toaster></Toaster>
     </div>
     
   );

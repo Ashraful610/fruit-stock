@@ -12,7 +12,7 @@
 }
 .error{
     font-size: 15px;
-    color:orange ;
+    color: red ;
 }
 @media screen  and (max-width:415px){
     .already-account{

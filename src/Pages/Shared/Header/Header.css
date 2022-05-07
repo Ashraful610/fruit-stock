@@ -10,10 +10,16 @@
 .navbar{
     background-color: black;
 }
+.hideLink{
+    display: flex;
+}
 
 @media screen and (max-width:415px) {
     .navbar-toggler{
         background-color: white;
     }
-    
+    .hideLink{
+        display: flex;
+        flex-direction: column;
+    }
 }

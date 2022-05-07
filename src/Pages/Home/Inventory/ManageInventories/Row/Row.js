@@ -1,7 +1,7 @@
 import './Row.css'
 
 const Row = ({fruit , handleDelete}) => {
-    const {name, price, description, img, suplier } = fruit
+    const {name, price, description, img, suplier ,quantity } = fruit
     const newDescription = description.slice(0  , 85)
 
     return (
@@ -13,8 +13,9 @@ const Row = ({fruit , handleDelete}) => {
                </td>
                 <td className=' detail'>
                       <span className='fruit-name'>  {name}</span> <br />
-                     Price : {price} <br />
-                     Suplier : {suplier}    
+                     Price : ${price} <br />
+                     Suplier : {suplier}    <br />
+                     Quantity : {quantity}
                 </td>
                 <td className='description '>
                    <p className=''>

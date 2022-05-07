@@ -5,6 +5,7 @@ import './Header.css'
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { signOut } from 'firebase/auth';
+import CustomLink from '../CustomLink/CustomLink';
 
 
 const Header = () => {
@@ -23,25 +24,32 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto ms-4">
-                    <Link className='link fs-5' to='/home'>Home</Link> 
-                    <Link className='link fs-5' to='/blogs'>Blogs</Link>
+                   <CustomLink className='link fs-5' to='/home'>
+                       Home
+                    </CustomLink> 
+                   <CustomLink className='link fs-5' to='/blogs'>
+                       Blogs
+                    </CustomLink>
                     {
-                        user?.uid && <div>
-                        <Link className='link fs-5' to='/myItem'> 
+                        user?.uid && <div className='hideLink'>
+                       <CustomLink className='link fs-5' to='/myItem'> 
                            My Item
-                        </Link>
-                        <Link className='link fs-5' to='/addNewItem'>
+                        </CustomLink>
+                       <CustomLink className='link fs-5' to='/addNewItem'>
                             Add Item
-                        </Link>
-                        <Link className='link fs-5' to='/manage'>
+                        </CustomLink>
+                       <CustomLink className='link fs-5' to='/manage'>
                             Manage Inventory
-                        </Link>      
+                        </CustomLink>      
                         </div>
                     }
                     </Nav>
                     <Nav className="ms-auto ms-4">
                    { 
-                      user?.uid? <button className='btn btn-link link fs-4' onClick={handleSignOut}>Sign Out</button> :<Link className='link fs-4' to='/login'>Sign In</Link> }
+                      user?.uid? <button className='btn btn-link link fs-4' onClick={handleSignOut}>Sign Out</button> :
+                      <CustomLink className='link fs-4' to='/login'>
+                          Sign In
+                     </CustomLink> }
                     </Nav>
                     </Navbar.Collapse>
                 </Container>
