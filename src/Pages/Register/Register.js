@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, {useState } from 'react';
 import './Register.css'
 import { Button } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import SocialAccount from '../Shared/SocialAccount/SocialAccount';
 import auth from '../../firebase.init';
-import toast, { Toaster } from 'react-hot-toast';
-import { createUserWithEmailAndPassword, onAuthStateChanged, sendEmailVerification, updateProfile } from 'firebase/auth';
-
+import toast from 'react-hot-toast';
+import { createUserWithEmailAndPassword, sendEmailVerification, sendPasswordResetEmail, updateProfile } from 'firebase/auth';
 
 
 const Register = () => {
@@ -91,50 +90,45 @@ const Register = () => {
        if(name.value && email.value && password.value && confrimPassword.value){
         createUserWithEmailAndPassword(auth, email.value, password.value)
         .then( () => {
-          // toast.success('User successfully created')
+          toast.success('User successfully created')
           navigate(from , { replace:true })
           handleUpdateuser()
           handleVerification()
         })
         .catch(error => {
-          const errorMessage = error.message;
-          console.log(errorMessage)
           setError(error)
         });
      }
   }
 
-    // user update
+    // user update name
     const handleUpdateuser = () => {
      updateProfile(auth.currentUser,{
        displayName:name.value
-     })
-     .then(() => {
-      //  toast.success('profile updated')
      })
     }
 
     // email verification
     const handleVerification = () => {
      sendEmailVerification(auth.currentUser)
-    //  toast.success('send email verification code')
+     toast.success('send email verification code')
     }
-    // console.log(user)
+ 
 
-  
-    // useEffect(()=>{
-    //   onAuthStateChanged(auth, (user) => {
-    //     if (user) {
-    //         navigate('/')
-    //     } else {
-    //       // User is signed out  
-    //     }
-    //   });
-    // },[])
-     
-    
-   
-   
+    // reset password
+    const handleResetPassword = event => {
+      event.preventDefault()
+      sendPasswordResetEmail(auth, email.value)
+      .then(() => {
+        toast.success('send a reset password email please check your email')
+      })
+      .catch((error) => {
+        setError(error)
+        console.log('reset password error')
+      });
+  }
+
+
     return (
         <div>
             <div className='signUp-form  shadow'>
@@ -181,22 +175,34 @@ const Register = () => {
                   {
                     error?.message && <p className='error'>{error.message}</p>
                   }
+
+              <div>
+                    <p className='text-white forget-password'>
+                      Forget password ?
+                      <button className='btn btn-link reset-password '
+                      onClick={handleResetPassword}>
+                        reset password
+                      </button>
+                    </p>   
+               </div>
+
                 <div className='signUp-btn-div'>
-                    <Button variant="outline-warning" className='signIn-btn'
-                    onClick={handleSignUp}
-                    >Sign Up</Button>
+                    <Button variant="outline-warning"
+                     className='signIn-btn'
+                     onClick={handleSignUp}>
+                      Sign Up
+                    </Button>
                 </div>
                  <div>
                      <p className='already-account'>
-                       Already have a account ? <Link to='/register' className='text-warning text-decoration-none'>Please sign in</Link>
+                       Already have a account ? <Link to='/login' className='text-warning text-decoration-none'>Please sign in</Link>
                      </p>
                  </div> 
                  <SocialAccount></SocialAccount>
-                <Toaster></Toaster>
             </form>
            
         </div>
-        </div>
+      </div>
     );
 }
 

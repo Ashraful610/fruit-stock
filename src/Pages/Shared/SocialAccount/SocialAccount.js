@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Button } from 'react-bootstrap';
 import './SocialAccount.css'
-import { GoogleAuthProvider, onAuthStateChanged, signInWithPopup } from 'firebase/auth';
+import { GoogleAuthProvider, sendPasswordResetEmail, signInWithPopup } from 'firebase/auth';
 import auth from '../../../firebase.init';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
-import { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 
 const SocialAccount = () => {
     const googleProvider = new GoogleAuthProvider()
@@ -15,19 +14,12 @@ const SocialAccount = () => {
    
     const handleGoogle = () => {
         signInWithPopup(auth , googleProvider)
-        // toast.success('user successfully sign in with Google')
-      navigate(from , {replace: true})
-
+        .then(data => {
+            toast.success('user successfully sign in with Google')
+            console.log(data)
+           navigate(from , {replace: true})
+        })
     }
-
-    
-    // onAuthStateChanged(auth, (user) => {
-    //     if (user) {
-    //         navigate('/')
-    //     } else {
-    //       // User is signed out
-    //     }
-    //   });
 
     return (
         <div>
@@ -43,9 +35,9 @@ const SocialAccount = () => {
                 </div>
             </div>
             <Button variant='outline-warning' onClick={handleGoogle} className='google-btn'>
-                Google
+                <img src="https://i.ibb.co/2ZzPwMv/google-removebg-preview.png" alt=""  className='google-logo'/>
+                
             </Button>
-            <Toaster></Toaster>
         </div>
     );
 };

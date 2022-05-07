@@ -8,7 +8,17 @@
     width: 400px;
     margin: 50px auto;
     padding: 20px;
-    height: 750px;
+    height: 800px;
+}
+.forget-password{
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 0px !important;
+}
+.reset-password{
+    text-decoration: none;
+    color:orange;
+    font-size: 18px;
 }
 .error{
     font-size: 15px;
@@ -21,5 +31,10 @@
     .signUp-form{
         width: 350px;
     }
-    
+    .forget-password{
+        font-size: 15px;
+    }
+    .reset-password{
+        font-size: 15px;
+    }
 }

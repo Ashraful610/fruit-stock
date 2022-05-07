@@ -1,4 +1,4 @@
-import { onAuthStateChanged, signInWithEmailAndPassword } from 'firebase/auth';
+import { onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { Button } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -30,18 +30,32 @@ const LogIn = () => {
     const handleSignIn = () => {
          signInWithEmailAndPassword(auth, email, password)
         .then(() => {
-         console.log('user sign in')
         toast.success('user successfully sign in') 
-
         })
         .catch(error => {
            setError(error)
         });
     }
 
-    if(user){
-        navigate(from, { replace: true });
+    const handleResetPassword = event => {
+        event.preventDefault()
+        sendPasswordResetEmail(auth, email)
+        .then(() => {
+          toast.success('send a reset password email please check your email')
+        })
+        .catch((error) => {
+          setError(error)
+        });
     }
+  
+ 
+    useEffect(() => {
+        if(user){
+            navigate(from, { replace: true });
+        }
+    },[user])
+
+    
    
     return (
         <div className='form  shadow'>
@@ -59,6 +73,17 @@ const LogIn = () => {
                {
                    error && <p className='error'>{error.message}</p>
                }
+ 
+                <div>
+                    <p className='text-white forget-password'>
+                      Forget password ?
+                      <button className='btn btn-link reset-password '
+                      onClick={handleResetPassword}>
+                        reset password
+                      </button>
+                    </p>   
+               </div>
+
                 <div className='signUp-btn-div'>
                     <Button variant="outline-warning" className='signIn-btn'
                     onClick={handleSignIn}>

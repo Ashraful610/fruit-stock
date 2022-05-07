@@ -90,7 +90,6 @@ const AddNewItem = () => {
         .then(data => {
             console.log(data)
             toast.success('successfully add a new fruit')
-            window.event.reset()
         })
     }
     return (

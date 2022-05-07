@@ -4,6 +4,9 @@
     font-weight: 600;
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
+.img{
+    height: 600px;
+}
 @media screen and (max-width:415px) {
    .heading{
     font-size: 30px;

@@ -3,7 +3,6 @@ import { Button } from 'react-bootstrap';
 import toast from 'react-hot-toast';
 import { useParams } from 'react-router-dom';
 import './UpdateFruit.css'
-import Loading from '../../Shared/Loading/Loading'
 
 const UpdateFruit = () => {
     const {fruitId }= useParams()

@@ -1,7 +1,7 @@
 .or-div{
     display: flex;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 20px;
     height: 50px;
 }
 .div{
@@ -20,16 +20,21 @@ hr:not([size]){
     margin-left: 15px;
     margin-right: 15px;
 }
+.google-logo{
+    width: 150px;
+    height: 70px;
+}
 .google-btn{
     font-size: 24px;
     width: 100%;
     margin-top: 30px;
+    padding: 0px;
 }
 @media screen and (max-width:415px) {
     .or-div{
         display: flex;
         align-items: center;
-        margin-top: 30px;
+        margin-top: 20px;
         height: 50px;
     }
     .google-btn{

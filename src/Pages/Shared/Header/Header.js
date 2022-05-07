@@ -6,6 +6,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { signOut } from 'firebase/auth';
 import CustomLink from '../CustomLink/CustomLink';
+import toast from 'react-hot-toast';
 
 
 const Header = () => {
@@ -13,7 +14,7 @@ const Header = () => {
     
      const handleSignOut = () => {
             signOut(auth)
-            console.log(user)
+            toast.success('User successfully sign out')
         }
     
     return (
