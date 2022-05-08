@@ -1,8 +1,18 @@
-# Getting Started with Create React App
+# Fruits Stock
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Fruits Stock website description 
+<p>
+   Assalamualaikum, our website is a site of fruit stocking. Our website discusses in detail the storage of different types of fruits - such as price, quantity, seller, description, picture, name, etc. You can choose any of our fruits and we have some fruit stocks and discussed how we produce.
+ </p>
+
+### Fruits Stock website details 
+- Our website is related to Fruits stock
+- Our website is fully responsive
+- Active Route has been used on our website
+- Mineful 404 routes have been set on our website
+- React hot toast has been used on our website
 
 In the project directory, you can run:
 
