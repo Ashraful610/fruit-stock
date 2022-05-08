@@ -12,6 +12,7 @@ import MyItem from './Pages/MyItem/MyItem';
 import Register from './Pages/Register/Register';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
+import NotFound from './Pages/Shared/NotFound/NotFound';
 import RequireAuth from './Pages/Shared/RequiredAuth/RequiredAuth';
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
                       <UpdateFruit></UpdateFruit>
               </RequireAuth>
             }></Route>
+            <Route path='*' element={<NotFound></NotFound>}></Route>
         </Routes>
         <Footer></Footer>
         <Toaster></Toaster>
