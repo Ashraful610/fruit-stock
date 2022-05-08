@@ -1,0 +1,21 @@
+.answer{
+    display: flex;
+}
+.javascript-div{
+    width: 50%;
+}
+.node-div{
+    width: 50%;
+}
+@media screen and (max-width:415px){
+    .javascript-div{
+        width: 100%;
+    }
+    .node-div{
+        width: 100%;
+    }
+    .answer{
+        display: flex;
+        flex-direction: column;
+    }
+}
