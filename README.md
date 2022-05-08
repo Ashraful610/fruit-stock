@@ -1,6 +1,6 @@
 # Fruits Stock
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Fruits Stock  [live site link](https://assignment-client-site-11.web.app/).
 
 ## Fruits Stock website description 
 <p>
