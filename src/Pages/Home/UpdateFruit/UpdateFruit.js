@@ -12,10 +12,10 @@ const UpdateFruit = () => {
 
     const [newQuantity , setNewQuantity] = useState(0)
     const [error , setError] = useState('')
-    const [sold ,setSold] = useState(0)
+    // const [sold ,setSold] = useState(0)
      
      useEffect(()=> {
-        const url = `http://localhost:5000/fruits/${fruitId}`
+        const url = `https://protected-fjord-63330.herokuapp.com/fruits/${fruitId}`
         fetch(url)
         .then(res => res.json())
         .then(data =>setFruit(data))
@@ -27,7 +27,7 @@ const UpdateFruit = () => {
      if(quantity >= 0 ){  
         const newFruit = {name , img , price , quantity , description , suplier,}
         
-           const url = `http://localhost:5000/fruits/${fruitId}`
+           const url = `https://protected-fjord-63330.herokuapp.com/fruits/${fruitId}`
            fetch( url ,{
                method:"PUT",
                headers:{
@@ -64,7 +64,7 @@ const UpdateFruit = () => {
         
      const newFruit = {name , img , price , quantity , description , suplier,}
     
-        const url = `http://localhost:5000/fruits/${fruitId}`
+        const url = `https://protected-fjord-63330.herokuapp.com/fruits/${fruitId}`
         fetch( url ,{
             method:"PUT",
             headers:{
@@ -92,7 +92,7 @@ const UpdateFruit = () => {
                      <h5>id: {_id}</h5>
                     <h5>Price : {price}</h5> 
                     <h5>Quantity : {quantity}</h5>
-                    <h5>Sold : {sold}</h5>
+                    {/* <h5>Sold : {sold}</h5> */}
                     <h5>Suplier : {suplier}</h5>
                     <p className="card-text"> 
                       <span className='fw-bold'>Descripton</span>  

@@ -10,7 +10,7 @@ const ManageInventories = () => {
     const handleDelete = id => {
         const procced = window.confirm('Are you sure you want to delete fruit')
         if(procced){
-           const url = `http://localhost:5000/fruits/${id}`
+           const url = `https://protected-fjord-63330.herokuapp.com/fruits/${id}`
            fetch(url , {
                method:'DELETE'
            })

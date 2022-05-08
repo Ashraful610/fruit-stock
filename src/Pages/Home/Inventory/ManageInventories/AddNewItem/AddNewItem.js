@@ -79,7 +79,7 @@ const AddNewItem = () => {
         event.preventDefault()
         const fruit = {name:name.value , price:price.value , img:img.value , quantity:quantity.value , suplier:suplier.value , description:description.value}
         
-        fetch('http://localhost:5000/fruit',{
+        fetch('https://protected-fjord-63330.herokuapp.com/fruit',{
             method:'POST',
             headers:{
                 'content-type' : 'application/json'
